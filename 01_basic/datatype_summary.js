@@ -25,3 +25,20 @@ const myfunction = function(){
 console.log(typeof family);//object
 console.log(typeof myObj);//object
 console.log(typeof myfunction);//function
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//stack(primitive)(ye copy dege ),heap(non-primitive)(original data mai change hoga)
+let myname="naincy";
+let anothername=myname;
+anothername="sweetu"
+console.log(myname);
+console.log(anothername);
+
+let userone = {
+      email :"user@gmail.com",
+      upi :"user@bei"
+}
+let usertwo=userone;
+usertwo.email="naincy@gmail.com";
+console.log(userone);
+console.log(usertwo);
