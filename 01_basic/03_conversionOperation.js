@@ -13,3 +13,15 @@ let isLoggedIn="naincy";//agr ye empty string hai to answer false aayge
 let booleanIsLoggedIn=Boolean(isLoggedIn);
 console.log(booleanIsLoggedIn);
 //1 -> true , 0 ->false , ""->false, "naincy"->true
+//operations 
+onsole.log(2+2);
+console.log(2-2);
+console.log(2*2);
+console.log(2/2);
+console.log(2**2)//2 ki power 2
+console.log(2**3);//2 ki power 3
+console.log(2^2); //bitwise xor
+console.log("1"+2+2)//122
+console.log(1+2+"2")//32
+console.log(+true)//1
+console.log(+"")//0
