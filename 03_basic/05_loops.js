@@ -123,10 +123,51 @@ const mynum =[1,2,3,4,5,6,7,8,9,10]
 //     return num>4//to humko return karne padega 
 // })
 // console.log(newNum);
-const newNums=[]
-mynum.forEach((num)=>{
-    if(num>4){
-        newNums.push(num)
-    }
-})
-console.log(newNums);
+// const newNums=[]
+// mynum.forEach((num)=>{
+//     if(num>4){
+//         newNums.push(num)
+//     }
+// })
+// console.log(newNums);
+//map and reduce
+// const myNums = [1,2,3,4,5];
+// const newNums = myNums.map((nums)=> nums+10);//ye bina return kai bhi chalega 
+// console.log(newNums);
+// const myNums = [1,2,3,4,5];
+// const newNums = myNums
+//                .map((nums)=> nums*10)
+//                .map((nums)=>{return nums+1})
+//                .filter((nums=>nums>30));//multipal map 
+// console.log(newNums);
+//reduce
+const arr=[1,2,3,4]
+// const initialValue=0;
+// const sumWithInitial = arr.reduce(//ye pure array ko travel karte hai
+//     (accumulator,currentValue)=>accumulator+currentValue,
+//     initialValue//ye humko initilized karne padta hai
+// );
+// console.log(sumWithInitial)
+// const mytotal = arr.reduce(function(acc,currval){
+//     console.log(`accumulator ${acc} and currentValue ${currval}`)
+//     return acc+currval
+// },5);//humko initial value to initilized karne padega
+//arr.reduce((acc,currval)=>{return acc+currval},0)//using arrow function
+// console.log(mytotal);
+const shoppingCart=[
+   {
+    itemName:"js course",
+    price:2999
+   },
+   {
+    itemName:"java",
+    price:999
+   },
+   {
+    itemName:"data science",
+    price:9999
+   }
+    
+]
+const total = shoppingCart.reduce((acc,item)=>{return acc+item.price},0);
+console.log(total)
