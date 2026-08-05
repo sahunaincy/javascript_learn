@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: pink;">
+    <script>
+       const div= document.createElement('div');
+       console.log(div);
+       div.className='title';
+      // div.id='heading';
+       div.setAttribute('id','heading');
+       div.setAttribute('title','learning');
+       div.textContent='hello indore';//iski jagha hum necha wali do line likh sakhte hai
+      const addtext= document.createTextNode("  naincy sahu");
+      div.appendChild(addtext);
+      document.body.appendChild(div);//us tag ko body mai append karne padega 
+      div.style.backgroundColor='yellow';
+      div.style.border="5px solid black";
+    </script>
+   
+</body>
+</html>
