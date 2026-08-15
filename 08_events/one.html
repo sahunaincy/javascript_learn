@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>html events</title>
+</head>
+
+<body style="background-color:#414141 ;">
+        <ul id="picture">
+                <li><img id="flower" width="200px" height="200px"
+                                src=https://tse4.mm.bing.net/th/id/OIP.VdDc3iT3PCrJnnsiThNzGgHaF_?r=0&pid=Api&h=220&P=0">
+                </li>
+                <li><img id="sky" width="200px" height="200px"
+                                src="https://tse1.mm.bing.net/th/id/OIP.WdUjooYsGw5I04qYSIKkswHaHa?r=0&pid=Api&h=220&P=0">
+                </li>
+                <li><img id="tree_panting" width="200px" height="200px"
+                                src="https://tse4.mm.bing.net/th/id/OIP.F787S02J8v7JJGkviaCDNAHaEE?r=0&pid=Api&h=220&P=0">
+                </li>
+                <li><img id="couple" width="200px" height="200px"
+                                src="https://tse3.mm.bing.net/th/id/OIP.DjbBauQC2C7wWQCz_x9aFgHaHa?r=0&pid=Api&h=220&P=0 ">
+                </li>
+                <!-- //onClick="alert('couple picture')" hum direct ye bhi likh sakhte hai -->
+                <li><img id="shiv" width="200px" height="200px"
+                                src="https://tse4.mm.bing.net/th/id/OIP.rI5YF56Tz0ShXGhMw3ezbgHaJM?r=0&pid=Api&h=220&P=0">
+                </li>
+                <li><img id="anime" width="200px" height="200px"
+                                src="https://preview.redd.it/zfohxnf8t3pa1.jpg?width=1024&format=pjpg&auto=webp&v=enabled&s=0f660e0a56476991ee3b97f2885d8c010fec5b97">
+                </li>
+                <li><a href="https://google.com" id="google">Google</a></li>
+</body>
+<script>
+        // document.getElementById("couple").onclick = function () { //hum aasa bhi kar sakhte hai but isme humko function kam milte hai
+        //     alert("couple picture");
+        // }
+        // document.getElementById("couple").addEventListener("dblclick", function (e) {
+        //         alert("couple picture");
+        //         console.log(e);
+        // }, false);//false bydefault hote hai
+        // Event Propagation: Event ka DOM elements ke through travel karna event propagation kehlata hai.
+        // Capturing: Event parent → child ki taraf travel karta hai. iske liya true
+        // Bubbling: Event child → parent ki taraf travel karta hai. iske liya false
+        //ye padne hai type , timestamp,defaultPrevented
+        // target , toElement , srcElement , currentTarget
+        //clientX, clientY , screenX , screenY,
+        //altkey, ctrlKey , shiftkey , keycode
+        // document.getElementById("picture").addEventListener("click", function () {
+        //         console.log("click inside the ul")
+        // }, false);
+        // document.getElementById("couple").addEventListener("click", function () {
+        //         console.log("couple picture");
+        // }, false);//bubbling
+        // //ye output aayge couplep .couple picture . click inside the ul
+        // document.getElementById("picture").addEventListener("click", function () {
+        //         console.log("click inside the ul")
+        // }, true);
+        // document.getElementById("couple").addEventListener("click", function () {
+        //         console.log("couple picture");
+        // }, true);//capturing
+        // document.getElementById("picture").addEventListener("click", function (e) {
+        //         console.log("click inside the ul");
+
+        // }, false);
+        // document.getElementById("couple").addEventListener("click", function (e) {
+        //         console.log("couple picture");
+        //         e.stopPropagation();//ye bubbling ko yahi rok dega
+        // }, false);
+        // document.getElementById("google").addEventListener("click", function (e) {
+        //         e.preventDefault();//hum chate hai google ki website na khule
+        //         console.log("google click");
+        // }, false)
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++project++++++++++++++++++++++++++++++++++++++++++++++
+        //on the click remove element
+
+        // document.querySelector("ul").addEventListener('click', function (e) {
+        //         console.log(e.target.parentNode);
+        //         e.target.parentNode.remove();
+        // }, false)
+
+        document.querySelector("ul").addEventListener("click", function (e) {
+                console.log(e.target.tagName);
+                if (e.target.tagName === 'IMG') {//tagName upperCase return karte hai to img maat  likhna IMG Likhna
+                        console.log(e.target.id);
+                        let removeIt = e.target.parentNode;
+                        removeIt.remove();
+                }
+        }, false);
+
+</script>
+
+</html>
