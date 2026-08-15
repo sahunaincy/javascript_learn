@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>syncroniczed</h1>
+    <input id="button" type="submit">
+
+</body>
+<script>
+    // setTimeout(function () {
+    //     alert("naincy sahu");
+    // }, 3000)//ye 3 sec baad ye print kar dega
+    // setInterval(function(){
+    //     console.log("naincy sahu")
+    // },2000);//ye 2 sec kai baad continue print karega
+    //document.querySelector("h1").innerHTML = "naincy sahu";
+
+    // setTimeout(function () {
+    //     document.querySelector("h1").innerHTML = "naincy sahu";
+    // }, 2000)
+
+    const changeMe = setTimeout(function () {
+        document.querySelector("h1").innerHTML = "naincy sahu";
+    }, 2000)
+
+    document.querySelector("#button").addEventListener('click', function () {
+        clearTimeout(changeMe);
+        console.log("stopped");
+    })
+
+</script>
+
+</html>
