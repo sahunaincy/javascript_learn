@@ -28,7 +28,9 @@
         const changeBGColor = function () {
             document.body.style.backgroundColor = randomColor();
         }
-        intervalId = setInterval(changeBGColor, 1000);
+        if (!intervalId) {//agr interval id null hai tohi chale
+            intervalId = setInterval(changeBGColor, 1000);
+        }
 
     })
     stop.addEventListener('click', function () {
